@@ -1183,7 +1183,8 @@ def main():
     defaults = Defaults(disable_notification=True)  # глобально без звука, но мы явно переопределим
     app = Application.builder().token(BOT_TOKEN).defaults(defaults).build()
 
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     loop.run_until_complete(set_commands(app))
 
     app.add_handler(CommandHandler("start", start))
