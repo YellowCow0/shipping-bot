@@ -13,6 +13,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # ---------- ВАШИ ДАННЫЕ ----------
+
 import os
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
